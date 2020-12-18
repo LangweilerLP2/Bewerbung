@@ -24,11 +24,13 @@ public class HelpCommand extends Command {
         EmbedBuilder info = new EmbedBuilder();
         final String prefix = Bot.getPrefix(guild);
 
-        info.addField("" + event.getAuthor().getAsTag(), "Eine Liste aller Commands:", false);
-        info.addField("", "-zt!help", true);
-        info.addField("", "-zt!saying", true);
-
         info.setColor(Color.cyan);
+
+        event.reply("```" +
+                "Eine Liste aller Befehle:" +
+                "- zt!help" +
+                "- zt!saying" +
+                "```");
 
         event.reply(info.build());
     }

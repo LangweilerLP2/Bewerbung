@@ -15,12 +15,11 @@ import javax.security.auth.login.LoginException;
 public class Bot {
 
     public static void main(String[] args) {
-        JDABuilder builder = JDABuilder.createDefault("Nzg5MTYxODExOTA3NTc1ODA4.X9uCNQ.U-Opn6KNuJcV0HYaGYPUgeqM-ww");
+        JDABuilder builder = JDABuilder.createDefault(Secrets.token);
 
         builder.disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE);
         builder.setBulkDeleteSplittingEnabled(false);
         builder.setCompression(Compression.NONE);
-        builder.setActivity(Activity.playing("mit Hiro"));
 
         builder.addEventListeners(new CommandHandler());
 

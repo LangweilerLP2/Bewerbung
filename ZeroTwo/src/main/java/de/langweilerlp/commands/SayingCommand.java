@@ -26,7 +26,9 @@ public class SayingCommand extends Command {
 
         String[] sayings = new String[]{
                 "Boku no Darling",
-                "Darling? Ohayo!"
+                "Darling? Ohayo!",
+                "Mein Daaarling :heart:",
+                "Darling?!"
         };
 
         Random r = new Random();
